@@ -42,7 +42,11 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
   let filtered = strangeArray.filter((name) => typeof name === 'string')
   console.log(filtered)
-  filtered.sort()
+  filtered.sort(function (a, b){
+     return a.localeCompare(b)
+  }
+
+  )
   showList(filtered)
 
 
